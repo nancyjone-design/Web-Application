@@ -16,7 +16,7 @@ def upload_csv(request):
 	data = {}
 	if "GET" == request.method:
 		return render(request, "myapp/upload_csv.html", data)
-    # if not GET, then proceed
+    
 	try:
 		csv_file = request.FILES["csv_file"]
 		if not csv_file.name.endswith('.csv'):
